@@ -1,16 +1,9 @@
 
 package com.rayzr522.webserver;
 
-import java.awt.Font;
-import java.io.File;
-import java.io.PrintStream;
-import java.util.Date;
-
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.SpringLayout;
+import javax.swing.LookAndFeel;
+import javax.swing.UIManager;
 
 public class Main extends JFrame {
 
@@ -35,6 +28,12 @@ public class Main extends JFrame {
 
 	private void init() {
 
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		panel = new ServerPanel();
 
 		add(panel);
@@ -50,7 +49,7 @@ public class Main extends JFrame {
 
 	}
 
-	public void start() {
+	public synchronized void start() {
 		panel.start();
 	}
 
