@@ -1,30 +1,28 @@
 .root {
-    -fx-font-size: 12.0pt;
+    -fx-font-size: 12pt;
     -fx-font-family: "Arial";
-    -fx-base: rgb(150.0, 215.0, 252.0);
-    -fx-background: rgb(215.0, 215.0, 215.0);
+    -fx-base: rgb(150, 215, 252);
+    -fx-background: rgb(215, 215, 215);
 }
 
 .label {
-    -fx-font-size: 12.0pt;
+    -fx-font-size: 12pt;
 }
 
 .button {
-    -fx-fill: linear-gradient(rgb(4.0, 154.0, 150.0), rgb(9.0, 111.0, 154.0));
+    -fx-fill: linear-gradient( rgb(4, 154, 150) , rgb(9, 111, 154) );
 }
 
 #console {
-	-fx-min-width: 700.0px;
-	-fx-min-height: 350.0px;
-	-fx-font-size: 12.0px;
+	-fx-min-width: 700px;
+	-fx-min-height: 350px;
+	-fx-font-size: 12px;
 	-fx-font-family: "Courier";
 }
 
 #welcome-text {
-    -fx-font-size: 24.0pt;
+    -fx-font-size: 24pt;
     -fx-font-weight: bold;
     -fx-fill: #555;
-    -fx-effect: innershadow( three-pass-box , rgba(0.0,0.0,0.0,0.7) , 6.0, 0.0 , 0.0 , 2.0 );
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0 , 0 , 2 );
 }
-
-
