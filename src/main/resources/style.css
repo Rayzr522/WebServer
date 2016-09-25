@@ -1,0 +1,30 @@
+.root {
+    -fx-font-size: 12.0pt;
+    -fx-font-family: "Arial";
+    -fx-base: rgb(150.0, 215.0, 252.0);
+    -fx-background: rgb(215.0, 215.0, 215.0);
+}
+
+.label {
+    -fx-font-size: 12.0pt;
+}
+
+.button {
+    -fx-fill: linear-gradient(rgb(4.0, 154.0, 150.0), rgb(9.0, 111.0, 154.0));
+}
+
+#console {
+	-fx-min-width: 700.0px;
+	-fx-min-height: 350.0px;
+	-fx-font-size: 12.0px;
+	-fx-font-family: "Courier";
+}
+
+#welcome-text {
+    -fx-font-size: 24.0pt;
+    -fx-font-weight: bold;
+    -fx-fill: #555;
+    -fx-effect: innershadow( three-pass-box , rgba(0.0,0.0,0.0,0.7) , 6.0, 0.0 , 0.0 , 2.0 );
+}
+
+

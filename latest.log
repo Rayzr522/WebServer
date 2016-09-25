@@ -1,7 +1,6 @@
------------------------------------
-* Welcome to WebServer v0.1!      *
-* Made by Rayzr522                *
-* This is a test webserver        *
------------------------------------
-[Mon Sep 12 17:01:23 EDT 2016] [WebServer] Starting...
-[Server] Server socket opened on port 8080
+[09/22/16 16:00:31] Init complete
+[09/22/16 16:00:33] Starting server...
+[09/22/16 16:00:33] [Server] Server socket opened on port 8080
+[09/22/16 16:00:34] Server stopped.
+[09/22/16 16:00:35] Starting server...
+[09/22/16 16:00:35] [Server] Server socket opened on port 8080

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Border?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rayzr522.webserver.fx.ServerPanel"
+	alignment="CENTER" hgap="5" vgap="10">
+	<padding>
+		<Insets top="10" bottom="10" left="5" right="5"></Insets>
+	</padding>
+
+	<Label text="Rayzr's Web Server" GridPane.columnIndex="0"
+		GridPane.rowIndex="0" GridPane.columnSpan="2" id="welcome-text"></Label>
+
+	<TextArea text="" GridPane.columnIndex="0" GridPane.rowIndex="1"
+		GridPane.columnSpan="2" editable="false" fx:id="console" id="console"></TextArea>
+
+	<TextField GridPane.columnIndex="0" GridPane.rowIndex="2"
+		GridPane.columnSpan="2" onKeyPressed="#onConsoleCommand" fx:id="consoleInput"></TextField>
+
+	<Button text="Start" GridPane.columnIndex="0" GridPane.rowIndex="3"
+		onAction="#onStart"></Button>
+	<Button text="Stop" GridPane.columnIndex="1" GridPane.rowIndex="3"
+		onAction="#onStop"></Button>
+
+	<stylesheets>
+		<URL value="@style.css" />
+	</stylesheets>
+</GridPane>
+
