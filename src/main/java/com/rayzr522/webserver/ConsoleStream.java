@@ -25,36 +25,36 @@ public class ConsoleStream extends PrintStream {
     private SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yy HH:mm:ss");
 
     public ConsoleStream(OutputStream out, Consumer<String> code, File file) throws FileNotFoundException {
-	super(out, true);
-	this.code = code;
-	this.fileStream = new FileOutputStream(file);
+        super(out, true);
+        this.code = code;
+        this.fileStream = new FileOutputStream(file);
     }
 
     @Override
     public void print(String s) {
-	super.print(s);
-	code.accept(s);
+        super.print(s);
+        code.accept(s);
 
-	try {
-	    fileStream.write(s.getBytes());
-	    if (s.indexOf("\n") >= 0) {
-		fileStream.flush();
-	    }
-	} catch (IOException e) {
-	    e.printStackTrace();
-	}
+        try {
+            fileStream.write(s.getBytes());
+            if (s.indexOf("\n") >= 0) {
+                fileStream.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     public void println(String x) {
-	print("[" + dateFormat.format(new Date()) + "] " + x + "\n");
+        print("[" + dateFormat.format(new Date()) + "] " + x + "\n");
     }
 
     @Override
     public void write(byte[] b) throws IOException {
-	super.write(b);
-	fileStream.write(b);
+        super.write(b);
+        fileStream.write(b);
     }
 
     /*
@@ -64,12 +64,12 @@ public class ConsoleStream extends PrintStream {
      */
     @Override
     public void close() {
-	super.close();
-	try {
-	    fileStream.close();
-	} catch (IOException e) {
-	    e.printStackTrace();
-	}
+        super.close();
+        try {
+            fileStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

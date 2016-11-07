@@ -14,13 +14,13 @@ public class TextField extends JPanel {
      */
     private static final long serialVersionUID = 1076222345645773786L;
 
-    private JTextField field;
+    private JTextField        field;
 
     public TextField(String label) {
 
-	setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
-	add(new JLabel(label));
-	add(field = new JTextField());
+        setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+        add(new JLabel(label));
+        add(field = new JTextField());
 
     }
 
@@ -32,7 +32,7 @@ public class TextField extends JPanel {
      * @see javax.swing.text.JTextComponent#getText(int, int)
      */
     public String getText(int offs, int len) throws BadLocationException {
-	return field.getText(offs, len);
+        return field.getText(offs, len);
     }
 
     /**
@@ -40,7 +40,7 @@ public class TextField extends JPanel {
      * @see javax.swing.text.JTextComponent#getText()
      */
     public String getText() {
-	return field.getText();
+        return field.getText();
     }
 
     /**
@@ -48,7 +48,7 @@ public class TextField extends JPanel {
      * @see javax.swing.text.JTextComponent#setText(java.lang.String)
      */
     public void setText(String t) {
-	field.setText(t);
+        field.setText(t);
     }
 
 }

@@ -13,28 +13,28 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-	primaryStage.setTitle("Hello world!");
+        primaryStage.setTitle("Hello world!");
 
-	Parent root = loadRoot("/Main");
+        Parent root = loadRoot("/Main");
 
-	Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root, 800, 600);
 
-	primaryStage.setScene(scene);
-	primaryStage.setMinHeight(scene.getHeight());
-	primaryStage.setMinWidth(scene.getWidth());
+        primaryStage.setScene(scene);
+        primaryStage.setMinHeight(scene.getHeight());
+        primaryStage.setMinWidth(scene.getWidth());
 
-	primaryStage.show();
+        primaryStage.show();
 
-	System.out.println("Init complete");
+        System.out.println("Init complete");
 
     }
 
     public static void main(String[] args) {
-	launch(args);
+        launch(args);
     }
 
     private static Parent loadRoot(String path) throws IOException {
-	return FXMLLoader.<Parent> load(Main.class.getResource(path + ".fxml"));
+        return FXMLLoader.<Parent> load(Main.class.getResource(path + ".fxml"));
     }
 
 }

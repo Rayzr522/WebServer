@@ -9,41 +9,41 @@ import java.net.Socket;
 
 public class WorkerRunnable implements Runnable {
 
-	static {
+    static {
 
-		try {
-			String path = Server.class.getResource("/Test.png").getPath();
-			FileInputStream stream = new FileInputStream(new File(path));
-			stream.read(file = new byte[stream.available()]);
-			stream.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+        try {
+            String path = Server.class.getResource("/Test.png").getPath();
+            FileInputStream stream = new FileInputStream(new File(path));
+            stream.read(file = new byte[stream.available()]);
+            stream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-	}
+    }
 
-	private static byte[]	file;
+    private static byte[] file;
 
-	protected Socket		clientSocket	= null;
+    protected Socket      clientSocket = null;
 
-	public WorkerRunnable(Socket clientSocket) {
-		this.clientSocket = clientSocket;
-	}
+    public WorkerRunnable(Socket clientSocket) {
+        this.clientSocket = clientSocket;
+    }
 
-	public void run() {
+    public void run() {
 
-		try {
+        try {
 
-			OutputStream output = clientSocket.getOutputStream();
-			long time = System.currentTimeMillis();
+            OutputStream output = clientSocket.getOutputStream();
+            long time = System.currentTimeMillis();
 
-			output.write(("HTTP/1.1 200 OK\nContent-Type: image/png\n\n").getBytes());
-			output.write(file);
-			output.close();
-			System.out.println("Request processed: " + time);
-		} catch (IOException e) {
-			// report exception somewhere.
-			e.printStackTrace();
-		}
-	}
+            output.write(("HTTP/1.1 200 OK\nContent-Type: image/png\n\n").getBytes());
+            output.write(file);
+            output.close();
+            System.out.println("Request processed: " + time);
+        } catch (IOException e) {
+            // report exception somewhere.
+            e.printStackTrace();
+        }
+    }
 }
